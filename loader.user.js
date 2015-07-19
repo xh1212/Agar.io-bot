@@ -2,7 +2,7 @@
 // @name        AposLoader
 // @namespace   AposLoader
 // @description Grabs latest versions of the bot scripts automatically.
-// @include     http://agar.io/
+// @include     http://choione.com/
 // @version     1.3
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
@@ -54,7 +54,7 @@ function getLatestCommit() {
                 window.jQuery("#" + prefix + "Dialog").show();
             }
 
-            window.jQuery.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/loader.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+            window.jQuery.get('https://raw.githubusercontent.com/Apostolique/agar.io-bot/master/loader.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
                 var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
                 latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 
